@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combo Pack Store</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <div class="logo">🛍 GenzBzaar</div>
+
+        <nav class="nav" id="navMenu">
+            <a href="#">Home</a>
+            <a href="#product">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-icons">
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Premium Lifestyle Combo</h1>
+        <p>Upgrade your comfort & style with our exclusive collection.</p>
+
+        <div class="hero-buttons">
+            <button class="primary-btn" onclick="scrollToProduct()">Shop Now</button>
+            <button class="secondary-btn">Learn More</button>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="product-section" id="product">
+
+    <h2 class="section-title">Our Products</h2>
+
+    <div class="product-grid">
+
+        <!-- Pillow -->
+        <div class="product-card">
+            <img src="images/Premium Pillow.jpg" alt="Premium Pillow">
+            <h3>Premium Pillow</h3>
+            <p class="price">₹499</p>
+            <p class="desc">Soft & Comfortable Sleeping Pillow</p>
+            <button onclick="addToCart('Premium Pillow', 499)">Add to Cart</button>
+        </div>
+
+        <!-- Handkerchief -->
+        <div class="product-card">
+            <img src="images/Soft Handkerchief.jpg" alt="Soft Handkerchief">
+            <h3>Soft Handkerchief</h3>
+            <p class="price">₹99</p>
+            <p class="desc">Premium Cotton Fabric</p>
+            <button onclick="addToCart('Soft Handkerchief', 99)">Add to Cart</button>
+        </div>
+
+        <!-- Notebook -->
+        <div class="product-card">
+            <img src="images/Stylish Notebook.jpg" alt="Stylish Notebook">
+            <h3>Stylish Notebook</h3>
+            <p class="price">₹199</p>
+            <p class="desc">Hard Cover Designer Notebook</p>
+            <button onclick="addToCart('Stylish Notebook', 199)">Add to Cart</button>
+        </div>
+
+        <!-- Chanter -->
+        <div class="product-card">
+            <img src="images/Spiritual Chanter.jpg" alt="Spiritual Chanter">
+            <h3>Spiritual Chanter</h3>
+            <p class="price">₹299</p>
+            <p class="desc">Peaceful Meditation Device</p>
+            <button onclick="addToCart('Spiritual Chanter', 299)">Add to Cart</button>
+        </div>
+
+        <!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-container">
+
+        <!-- Contact Info Card -->
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>We would love to hear from you. Reach us anytime!</p>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+91 99999 99999</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>support@combostore.com</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Muzaffarpur, Bihar</span>
+            </div>
+
+            <a href="https://wa.me/919999999999" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="contact-form">
+            <h3>Send Message</h3>
+
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+                <p id="successMsg"></p>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+    </div>
+</section>
+<div class="cart-sidebar" id="cartSidebar">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p>Total: ₹<span id="total">0</span></p>
+    <button class="checkout-btn">Proceed to Checkout</button>
+</div>
+
+<a href="https://wa.me/919999999999" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+    <p>© 2026 ComboStore | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
