@@ -141,3 +141,16 @@ function toggleCart(){
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
+
+
+
+
+
+
+
+
+
+function toggleCart(){
+    document.getElementById("cartSidebar").classList.toggle("active");
+    document.getElementById("cartOverlay").classList.toggle("active");
+}
